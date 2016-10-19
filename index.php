@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--Este es un menjsaje probando el repositorio-->
 <html>
   <head>
     <style type="text/css">
@@ -133,7 +134,7 @@ error_reporting(E_ALL ^ E_NOTICE);
 ///////////////////////////// CONSULTA DE TODOS LOS BARRIOS QUE TENGAN FICHAS HOGAR COORDENADAS ////////////////////////////
   $link = mysqli_connect('localhost', 'root', '','hospital_hogar');
   $res=mysqli_query($link,"SELECT ficha_hogar.`BARRIOS_ID_BARRIO`,barrios.DES_BARRIO as NOMBRE_BARRIO,barrios.COORDENADAS AS COORDENADAS FROM ficha_hogar INNER JOIN barrios ON barrios.ID_BARRIO= ficha_hogar.BARRIOS_ID_BARRIO GROUP BY BARRIOS_ID_BARRIO");
-
+//Mensaje 
   $i=0;
   $c=0;
   while ($row=mysqli_fetch_assoc($res)) {
